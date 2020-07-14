@@ -9,7 +9,7 @@ import TabBar from './components/tabbar/TabBar';
 export default {
   name: 'App',
   components:{
-    TabBar
+    TabBar  
   }
 }
 </script>
