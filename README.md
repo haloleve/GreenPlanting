@@ -20,8 +20,5 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-### 主页面
-主页面内容区域
+### 心情圈
+心情圈内容页面

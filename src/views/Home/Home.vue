@@ -1,6 +1,8 @@
 <template>
   <main>
-    <nav-bar></nav-bar>
+    <nav-bar>
+      <div slot="nav-title">首页</div>
+    </nav-bar>
     <div class="content">
       <div>woshi nei</div>
       <div>woshi nei</div>
