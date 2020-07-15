@@ -17,13 +17,14 @@ export default {
 </script>
 <style lang="scss" scope>
 header{
-  height: 49px;
-  line-height: 49px;
-  position: fixed;
-  top:0;
-  left: 0;
+  height: 44px;
+  line-height: 44px;
+  box-sizing: border-box;
+  // position: fixed;
+  // top:0;
+  // left: 0;
   width: 100vw;
-  background-color: #f6f6f6;
+  border-bottom: 1px solid #eaeaea;
   .nav-bar-item{
     display: flex;
     align-items: center;

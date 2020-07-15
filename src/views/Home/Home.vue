@@ -1,73 +1,24 @@
 <template>
   <main>
-    <nav-bar>
-      <div slot="nav-title">首页</div>
-    </nav-bar>
-    <div class="content">
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-      <div>woshi nei</div>
-    </div>
+    <home-nav></home-nav>
+    <home-carous></home-carous>
   </main>
 </template>
 <script>
-import NavBar from '../../components/navbar/NavBar';
+import HomeNav from '../Home/HomeNav/HomeNavs';
+import HomeCarous from '../Home/HomeCarous';
 
 export default {
   name: "Home",
   components:{
-    NavBar
+    HomeNav,
+    HomeCarous
   }
 }
 </script>
 <style lang="scss" scope>
 .content{
   width: 100vw;
-  height: calc(100% - 98px);
-  margin: 49px 0;
   overflow: scroll;
 }
 </style>
