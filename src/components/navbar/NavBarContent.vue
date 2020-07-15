@@ -15,6 +15,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  height:49px;
   .nav-back{
     flex: 2;
   };
@@ -23,7 +24,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
   };
   .nav-lists{
     flex: 2;
