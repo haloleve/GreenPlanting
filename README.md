@@ -20,5 +20,5 @@ npm run build
 npm run lint
 ```
 
-### 我的
-个人页面
+### 主页面
+简单的补充 header + carousel
