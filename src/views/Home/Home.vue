@@ -1,19 +1,24 @@
 <template>
   <main>
-    <home-nav></home-nav>
+    <home-nav path="/search"></home-nav>
     <home-carous></home-carous>
   </main>
 </template>
 <script>
 import HomeNav from '../Home/HomeNav/HomeNavs';
-import HomeCarous from '../Home/HomeCarous';
+import HomeCarous from '../Home/HomeCarous/HomeCarous';
 
 export default {
   name: "Home",
+  data(){
+    return {
+      
+    }
+  },
   components:{
     HomeNav,
     HomeCarous
-  }
+  },
 }
 </script>
 <style lang="scss" scope>

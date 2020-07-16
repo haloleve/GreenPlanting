@@ -1,23 +1,23 @@
 <template>
-  <div class="tab-bar">
+  <div ref="tabbar" class="tab-bar">
     <tab-bar-item path='/home'>
-      <img slot="tab-img" src="../../assets/images/fontimg/home.svg">
-      <img slot="tab-img-active" src="../../assets/images/fontimg/home-a.svg">
+      <img slot="tab-img" src="@/assets/images/fontimg/home.svg">
+      <img slot="tab-img-active" src="@/assets/images/fontimg/home-a.svg">
       <p slot="tab-text">首页</p>
     </tab-bar-item>
     <tab-bar-item path='/mood'>
-      <img slot="tab-img" src="../../assets/images/fontimg/mood-happy.svg">
-      <img slot="tab-img-active" src="../../assets/images/fontimg/mood-happy-a.svg">
+      <img slot="tab-img" src="@/assets/images/fontimg/mood-happy.svg">
+      <img slot="tab-img-active" src="@/assets/images/fontimg/mood-happy-a.svg">
       <p slot="tab-text">心情圈</p>
     </tab-bar-item>
     <tab-bar-item path='/serve'>
-      <img slot="tab-img" src="../../assets/images/fontimg/cloud-server.svg">
-      <img slot="tab-img-active" src="../../assets/images/fontimg/cloud-server-a.svg">
+      <img slot="tab-img" src="@/assets/images/fontimg/cloud-server.svg">
+      <img slot="tab-img-active" src="@/assets/images/fontimg/cloud-server-a.svg">
       <p slot="tab-text">服务</p>
     </tab-bar-item>
     <tab-bar-item path='/profile'>
-      <img slot="tab-img" src="../../assets/images/fontimg/my.svg">
-      <img slot="tab-img-active" src="../../assets/images/fontimg/my-a.svg">
+      <img slot="tab-img" src="@/assets/images/fontimg/my.svg">
+      <img slot="tab-img-active" src="@/assets/images/fontimg/my-a.svg">
       <p slot="tab-text">我的</p>
     </tab-bar-item>
   </div>
@@ -29,7 +29,10 @@ export default {
   name: 'TabBar',
   components:{
     TabBarItem
-  }
+  },
+  mounted() {
+    this.$store.commit('setTab',this.$refs.tabbar);
+  },
 }
 </script>
 <style lang="scss" scoped>

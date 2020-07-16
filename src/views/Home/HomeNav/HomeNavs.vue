@@ -1,20 +1,32 @@
 <template>
   <nav-bar>
       <img slot="nav-back" src="https://cdnfile.aixifan.com/static/common/widget/header/img/logo.1630669e02c65e87236f.svg" />
-
-      
-      <div class="nav-search" slot="nav-title"><i class="el-icon-search"></i></div>
-    
+      <div class="nav-search" slot="nav-title"><i @click="search" class="el-icon-search"></i></div>
     <button slot="nav-lists">请登录</button>
   </nav-bar>
 </template>
 <script>
-import NavBar from '../../../components/navbar/NavBar';
+import NavBar from '@/components/navbar/NavBar';
 export default {
   name: 'HomeNav',
+  props:{
+    path: {
+      type: String
+    }
+  },
+  data(){
+    return {
+      
+    }
+  },
   components: {
     NavBar
-  }
+  },
+  methods: {
+    search(){
+      this.$router.push(this.path);
+    }
+  },
 }
 </script>
 <style lang="scss" scope>

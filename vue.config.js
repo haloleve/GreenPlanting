@@ -1,15 +1,10 @@
+const path = require("path");
+
+function resolve(dir) {
+    return path.join(__dirname, dir);
+}
 module.exports = {
     configureWebpack: {
-        resolve: {
-            alias: {
-                "@": "src",
-                assets: "@/assets",
-                common: "@/common",
-                components: "@/components",
-                network: "@/network",
-                views: "@/views"
-            }
-        },
         devServer: {
             overlay: {
                 warnings: false,
@@ -17,5 +12,15 @@ module.exports = {
             }
         }
     },
-    lintOnSave: false
+    lintOnSave: false,
+    chainWebpack: (config) => {
+        config.resolve.alias
+            .set("@", resolve("src"))
+            .set("assets", resolve("src/assets"))
+            .set("components", resolve("src/components"))
+            .set("network", resolve("src/network"))
+            .set("plugin", resolve("src/plugin"))
+            .set("views", resolve("src/views"))
+            .set("store", resolve("src/store"));
+    }
 };

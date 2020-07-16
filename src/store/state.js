@@ -1,3 +1,4 @@
 export default {
-    num: 0
+    num: 0,
+    tabbar: null
 };

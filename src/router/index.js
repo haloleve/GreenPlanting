@@ -9,6 +9,8 @@ const Serve = () =>
     import ('../views/Serve/Serve.vue');
 const Profile = () =>
     import ('../views/Profile/Profile.vue');
+const Search = () =>
+    import ("../views/Home/SearchPage.vue");
 
 Vue.use(VueRouter);
 
@@ -35,6 +37,11 @@ const routes = [{
         path: "/profile",
         name: "Profile",
         component: Profile
+    },
+    {
+        path: "/search",
+        name: "Search",
+        component: Search
     }
 ];
 
@@ -44,8 +51,8 @@ const router = new VueRouter({
     routes
 });
 const originalPush = VueRouter.prototype.push
-   VueRouter.prototype.push = function push(location) {
-   return originalPush.call(this, location).catch(err => err)
+VueRouter.prototype.push = function push(location) {
+    return originalPush.call(this, location).catch(err => err)
 }
 
 
