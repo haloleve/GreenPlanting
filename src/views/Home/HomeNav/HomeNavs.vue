@@ -56,14 +56,13 @@ export default {
     height: 30px;
     padding: 10px;
     margin-bottom: 4px;
-    font-size: 13px;
+    font-size: 12px;
     color: #fff;
     border-radius: 15px;
     border: none;
     box-sizing: border-box;
     background: #1296db;
     font-weight: 500;
-
   }
 }
 </style>

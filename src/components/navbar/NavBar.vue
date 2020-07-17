@@ -20,16 +20,13 @@ header{
   height: 44px;
   line-height: 44px;
   box-sizing: border-box;
-  // position: fixed;
-  // top:0;
-  // left: 0;
-  width: 100vw;
+  width: 100%;
   border-bottom: 1px solid #eaeaea;
   .nav-bar-item{
     display: flex;
     align-items: center;
     justify-content: center;
-    height:49px;
+    height:44px;
   .nav-back{
     flex: 2;
   };

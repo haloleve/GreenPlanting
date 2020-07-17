@@ -37,6 +37,8 @@ export default {
 .carous{
   overflow:hidden;
   position: relative;
+  box-sizing: border-box;
+  margin: 4px 6px;
   img{
     width: 100%;
     height: 160px;

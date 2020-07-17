@@ -10,7 +10,9 @@ const Serve = () =>
 const Profile = () =>
     import ('../views/Profile/Profile.vue');
 const Search = () =>
-    import ("../views/Home/SearchPage.vue");
+    import ("../views/Home/HomeSearch/SearchPage.vue");
+const PlaneInfo = () =>
+    import ("../views/Home/HomeInfo/HomeInfos.vue");
 
 Vue.use(VueRouter);
 
@@ -42,6 +44,11 @@ const routes = [{
         path: "/search",
         name: "Search",
         component: Search
+    },
+    {
+        path: "/info",
+        name: "HomeInfo",
+        component: PlaneInfo
     }
 ];
 
