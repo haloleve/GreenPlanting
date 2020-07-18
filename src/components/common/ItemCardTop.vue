@@ -14,7 +14,7 @@ export default {
   name: 'ItemCardTop',
   methods: {
     iteminfo(){
-      this.$router.push('/info')
+      this.$router.push('/detail')
     }
   },
 }

@@ -13,6 +13,8 @@ const Search = () =>
     import ("../views/Home/HomeSearch/SearchPage.vue");
 const PlaneInfo = () =>
     import ("../views/Home/HomeInfo/HomeInfos.vue");
+const Details = () =>
+    import ("../views/Home/HomeDetail/HomeDetails.vue");
 
 Vue.use(VueRouter);
 
@@ -49,6 +51,11 @@ const routes = [{
         path: "/info",
         name: "HomeInfo",
         component: PlaneInfo
+    },
+    {
+        path: "/detail",
+        name: "HomeDetail",
+        component: Details
     }
 ];
 

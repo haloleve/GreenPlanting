@@ -35,13 +35,14 @@
           <p>我是介绍</p>
         </template>
       </item-card-top>
+      <el-button type="primary" icon="el-icon-refresh-left">换一批</el-button>
     </div>
 </template>
 <script>
 import ItemCardTop from '@/components/common/ItemCardTop';
 
 export default {
-  name: 'CardBox',
+  name: 'HFCardBox',
   components: {
     ItemCardTop
   }
@@ -52,5 +53,9 @@ export default {
   width: 100%;
   padding: 5px 10px 5px 15px;
   overflow: hidden;
+  .el-button{
+    width: 100%;
+    margin: 15px 0;
+  }
 }
 </style>

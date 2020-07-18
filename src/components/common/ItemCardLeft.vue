@@ -1,5 +1,5 @@
 <template>
-  <div class="item-card-left">
+  <div class="item-card-left" @click="iteminfo">
     <div class="item-left-img">
       <slot name="item-left">
       </slot>
@@ -14,7 +14,7 @@ export default {
   name: 'ItemCardTop',
   methods: {
     iteminfo(){
-      this.$router.push('/info')
+      this.$router.push('/detail')
     }
   },
 }

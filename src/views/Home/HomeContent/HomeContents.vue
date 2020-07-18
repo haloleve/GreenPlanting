@@ -5,13 +5,14 @@
     </div>
     <left-right>
       <h4 slot="title-left">花卉种植</h4>
-      <span slot="title-right">更多</span>
+      <span slot="title-right" @click="toItemList">更多</span>
     </left-right>
-    <card-box></card-box>
+    <hf-card-box></hf-card-box>
     <left-right>
       <h4 slot="title-left">观赏植物种植</h4>
       <span slot="title-right">更多</span>
     </left-right>
+    <gs-card-box></gs-card-box>
     <left-right>
       <h4 slot="title-left">粮食植物种植</h4>
       <span slot="title-right">更多</span>
@@ -25,14 +26,21 @@
 </template>
 <script>
 import LeftRight from '@/components/common/LeftRight';
-import CardBox from '@/components/common/CardBox'
+import HfCardBox from './HFCardBox';
+import GsCardBox from './GSCardBox';
 
 export default {
   name: 'HomeContent',
   components: {
     LeftRight,
-    CardBox
-  }
+    HfCardBox,
+    GsCardBox,
+  },
+  methods: {
+    toItemList(){
+      this.$router.push('/info')
+    }
+  },
 }
 </script>
 <style lang="scss" scope>

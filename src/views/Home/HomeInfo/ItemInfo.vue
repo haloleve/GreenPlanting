@@ -32,7 +32,8 @@ export default {
   name: 'ItemInfo',
   components: {
     ItemCardLeft
-  }
+  },
+  
 }
 </script>
 <style lang="scss" scope>
