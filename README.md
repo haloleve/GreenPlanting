@@ -22,3 +22,6 @@ npm run lint
 
 ### 主页面
 简单的补充 header + carousel
+
+### 心情圈
+简单完成 两个页面

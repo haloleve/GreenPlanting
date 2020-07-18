@@ -1,21 +1,18 @@
 <template>
-  <main>
-    <nav-bar>
-      <div slot="nav-title">心情圈</div>
-    </nav-bar>
-    <div class="content">
-      <div>dddd</div>
-      <div>woshi nei</div>
-    </div>
+  <main class="mood-main">
+    <mood-nav></mood-nav>
+    <mood-content></mood-content>
   </main>
 </template>
 <script>
-import NavBar from '@/components/navbar/NavBar';
+import MoodNav from './MoodNav/MoodNavs';
+import MoodContent from './MoodContentItem/MoodContent';
 
 export default {
   name: "Mood",
   components:{
-    NavBar
+    MoodNav,
+    MoodContent
   },
   computed: {
     NavBarName(){
@@ -25,10 +22,16 @@ export default {
 }
 </script>
 <style lang="scss" scope>
-.content{
+.mood-main{
   width: 100vw;
-  height: calc(100% - 98px);
-  margin: 49px 0;
+  margin-bottom: 50px;
   overflow: scroll;
+  > header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: gold;
+  }
 }
 </style>

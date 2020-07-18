@@ -1,5 +1,5 @@
 <template>
-  <nav-bar>
+  <nav-bar class="home-nav">
       <img slot="nav-back" src="https://cdnfile.aixifan.com/static/common/widget/header/img/logo.1630669e02c65e87236f.svg" />
       <div class="nav-search" slot="nav-title"><i @click="search" class="el-icon-search"></i></div>
     <button slot="nav-lists">请登录</button>
@@ -37,6 +37,7 @@ export default {
     padding-left: 5px;
   }
 }
+.home-nav{
 .nav-search {
   width: 100%;
   height: 100%;
@@ -65,4 +66,7 @@ export default {
     font-weight: 500;
   }
 }
+}
+
+
 </style>

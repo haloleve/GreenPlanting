@@ -15,10 +15,17 @@ const PlaneInfo = () =>
     import ("../views/Home/HomeInfo/HomeInfos.vue");
 const Details = () =>
     import ("../views/Home/HomeDetail/HomeDetails.vue");
+const Issue = () =>
+    import ("../views/Mood/MoodIssue/MoodIssues.vue");
 
 Vue.use(VueRouter);
 
 const routes = [{
+        path: '/issue',
+        name: 'Issue',
+        component: Issue
+    },
+    {
         path: "/",
         redirect: "/home"
     },
