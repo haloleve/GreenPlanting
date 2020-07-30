@@ -33,9 +33,9 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: rgb(241, 234, 130);
-        color: #333;
-        font-size: 14px;
+        background: #9fd4ff;
+        color: #000;
+        font-size: 15px;
         border: 1px solid #333;
       }
    }

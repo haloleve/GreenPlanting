@@ -1,30 +1,38 @@
 <template>
   <div class="comments">
-    <el-input placeholder="请输入内容">
-      <template slot="append"><i class="el-icon-position"></i></template>
-    </el-input>
     <div class="user-comment">
+      <h3>评论</h3>
       <ul>
         <li>
           <img src="@/assets/images/homepage/plane01.jpg" alt="用户头像">
           <div class="user-comment-content">
-            <p>用户名<span class="user-badge el-icon-male"></span></p>
-            <time>01-01</time>
+            <p>
+              <span>用户名</span>
+              <span><i class="el-icon-thumb"></i>49</span>
+              </p>
             <div class="comment-text">朝辞白帝彩云见,千里江陵一日还朝辞白帝彩云见,千里江陵一日还朝辞白帝彩云见,千里江陵一日还</div>
-            <comment-icon></comment-icon>
           </div>
         </li>
         <li>
           <img src="@/assets/images/homepage/plane01.jpg" alt="用户头像">
           <div class="user-comment-content">
-            <p>用户名<span class="user-badge el-icon-male"></span></p>
-            <time>01-01</time>
+            <p>
+              <span>用户名</span>
+              <span><i class="el-icon-thumb"></i>49</span>
+            </p>
             <div class="comment-text">朝辞白帝彩云见,千里江陵一日还朝辞白帝彩云见,千里江陵一日还朝辞白帝彩云见,千里江陵一日还</div>
-            <comment-icon></comment-icon>
           </div>
         </li>
       </ul>
     </div>
+    <div class="all-comment">
+      <p @click="toPinLun">查看全部100条评论</p>
+    </div>
+    <div class="user-comments-input">
+      <img src="@/assets/images/homepage/plane01.jpg" alt="用户头像">
+      <input @click="toPinLun" type="text" placeholder="添加评论..">
+    </div>
+    
   </div>
 </template>
 <script>
@@ -35,20 +43,23 @@ export default {
   components:{
     CommentIcon
   },
-  
+  methods: {
+    toPinLun(){
+      this.$router.push('/mood/pinlun');
+    }
+  },
 }
 </script>
 <style lang="scss" scoped>
 .user-comment{
   ul{
-    padding-top: 15px;
-    border-top: 1px solid #ccc;
+    padding-top: 10px;
     li{
       display: flex;
       min-height: 80px;
       max-height: 120px;
       padding: 15px 0;
-      border-bottom: 1px solid #ccc;
+      
       > img{
         width: 35px;
         height: 35px;
@@ -57,27 +68,52 @@ export default {
       .user-comment-content{
         margin-left: 15px;
         font-size: 14px;
-        .comment-text{
-          overflow: hidden;
-          text-overflow: ellipsis;
-          -webkit-line-clamp: 4;
-          -webkit-box-orient: vertical;
-        }
-        time{
-          font-size: 12px;
-        }
-        .comment-icons{
+        p{
           display: flex;
           justify-content: space-between;
           align-items: center;
-          margin-top: 5px;
-          font-size: 12px;
-          span{
-            margin: 0 5px;
+          margin-bottom: 2px;
+          i {
+            padding-right: 5px;
           }
+        }
+        .comment-text{
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
         }
       }
     }
+  }
+}
+.all-comment{
+  font-size: 14px;
+  color: rgb(124, 124, 124);
+  margin-left: 50px;
+}
+.user-comments-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 ;
+  border-radius: 20px;
+  > img{
+      width: 35px;
+      height: 35px;
+      vertical-align: middle;
+      margin-right: 10px;
+      border-radius: 50%;
+  }
+  > input {
+    flex: 1;
+    border:2px solid #f6f6f6;
+    outline: none;
+    font-size: 12px;
+    margin: 10px 0;
+    padding: 10px 10px;
+    border-radius: 15px;
+    vertical-align: middle;
   }
 }
 </style>

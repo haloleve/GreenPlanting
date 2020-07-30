@@ -17,10 +17,24 @@ const Details = () =>
     import ("../views/Home/HomeDetail/HomeDetails.vue");
 const Issue = () =>
     import ("../views/Mood/MoodIssue/MoodIssues.vue");
+const PinLunMain = () =>
+    import ("../views/Mood/PinLun/PinLunMain.vue");
+const HuiFu = () =>
+    import ("../views/Mood/PinLun/HuiFus/HuiFu.vue");
 
 Vue.use(VueRouter);
 
 const routes = [{
+        path: '/mood/pinlun/huifu',
+        name: 'HuiFu',
+        component: HuiFu
+    },
+    {
+        path: '/mood/pinlun',
+        name: 'Pinlun',
+        component: PinLunMain
+    },
+    {
         path: '/issue',
         name: 'Issue',
         component: Issue
@@ -37,7 +51,11 @@ const routes = [{
     {
         path: "/mood",
         name: "Mood",
-        component: Mood
+        component: Mood,
+        // children: [{
+        //     path: 'pinlun',
+        //     component: PinLunMain
+        // }]
     },
     {
         path: "/serve",
