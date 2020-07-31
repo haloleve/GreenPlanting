@@ -26,8 +26,7 @@ export default {
   padding: 8px 4px;
   box-sizing: border-box;
   .item-top-img{
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
     height: auto;
     img{
       width: 100%;
@@ -36,26 +35,29 @@ export default {
   }
   .item-top-info{
     position: relative;
-    font-size: 13px;
-    color: #222;
+    font-size: 14px;
+    color: #000028;
+    margin-top: 6px;
     p{
       width: 90%;
       margin-top: 4px;
-      color: #999;
+      color: #a2a2b6;
+      line-height: 18px;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      &::after{
-        position: absolute;
-        right: 10px;
-        bottom: 1px;
-        width: 15px;
-        height: 15px;
-        color: #1296db;
-        content: "▲";
-        transform: rotate(90deg);
-        display: block;
-      }
+      font-size: 12px;
+      // &::after{
+      //   position: absolute;
+      //   right: 10px;
+      //   bottom: 1px;
+      //   width: 15px;
+      //   height: 15px;
+      //   color: #1296db;
+      //   content: "▲";
+      //   transform: rotate(90deg);
+      //   display: block;
+      // }
     }
   }
 }
@@ -66,7 +68,7 @@ export default {
     width: 100%;
     img{
       width: 100%;
-      min-height: 120px;
+      min-height: 160px;
     }
   }
 }

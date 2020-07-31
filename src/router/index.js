@@ -21,22 +21,49 @@ const PinLunMain = () =>
     import ("../views/Mood/PinLun/PinLunMain.vue");
 const HuiFu = () =>
     import ("../views/Mood/PinLun/HuiFus/HuiFu.vue");
+const Menu = () =>
+    import ("../views/Home/HomeMenus/HomeMenu.vue");
+const HomeAll = () =>
+    import ("../views/Home/HomeAll.vue");
+const HHZZ = () =>
+    import ("../views/Home/HomePage/HFZZ.vue");
+const SGZZ = () =>
+    import ("../views/Home/HomePage/SGZZ.vue");
+const SCZWZZ = () =>
+    import ("../views/Home/HomePage/SCZWZZ.vue");
+const GSZWZZ = () =>
+    import ("../views/Home/HomePage/GSZWZZ.vue");
+const LSZWZZ = () =>
+    import ("../views/Home/HomePage/LSZWZZ.vue");
+const XWZWZZ = () =>
+    import ("../views/Home/HomePage/XWZWZZ.vue");
+const YKZWZZ = () =>
+    import ("../views/Home/HomePage/YKZWZZ.vue");
+const YLZWZZ = () =>
+    import ("../views/Home/HomePage/YLZWZZ.vue");
+const YYZWZZ = () =>
+    import ("../views/Home/HomePage/YYZWZZ.vue");
 
 Vue.use(VueRouter);
 
 const routes = [{
-        path: '/mood/pinlun/huifu',
-        name: 'HuiFu',
+        path: "/home/menu",
+        name: "Menu",
+        component: Menu
+    },
+    {
+        path: "/mood/pinlun/huifu",
+        name: "HuiFu",
         component: HuiFu
     },
     {
-        path: '/mood/pinlun',
-        name: 'Pinlun',
+        path: "/mood/pinlun",
+        name: "Pinlun",
         component: PinLunMain
     },
     {
-        path: '/issue',
-        name: 'Issue',
+        path: "/issue",
+        name: "Issue",
         component: Issue
     },
     {
@@ -46,16 +73,53 @@ const routes = [{
     {
         path: "/home",
         name: "Home",
-        component: Home
+        component: Home,
+        children: [{
+                path: "/",
+                component: HomeAll
+            },
+            {
+                path: "hhzz",
+                component: HHZZ
+            },
+            {
+                path: "sgzz",
+                component: SGZZ
+            },
+            {
+                path: "sczwzz",
+                component: SCZWZZ
+            },
+            {
+                path: "gszwzz",
+                component: GSZWZZ
+            },
+            {
+                path: "lszwzz",
+                component: LSZWZZ
+            },
+            {
+                path: "xwzwzz",
+                component: XWZWZZ
+            },
+            {
+                path: "ykzwzz",
+                component: YKZWZZ
+            },
+            {
+                path: "ylzwzz",
+                component: YLZWZZ
+            },
+            {
+                path: "yyzwzz",
+                component: YYZWZZ
+            }
+        ]
     },
     {
         path: "/mood",
         name: "Mood",
-        component: Mood,
-        // children: [{
-        //     path: 'pinlun',
-        //     component: PinLunMain
-        // }]
+        component: Mood
     },
     {
         path: "/serve",

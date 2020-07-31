@@ -3,23 +3,35 @@
     <button slot="nav-back" @click="back" class="back el-icon-arrow-left"></button>
     <div class="searchbox" slot="nav-title">
       <i class="el-icon-search"></i>
-      <input type="text" maxlength="20" placeholder="请输入搜索内容">
+      <input @input="searching" type="search" maxlength="20" placeholder="请输入搜索内容">
     </div>
     <button slot="nav-lists" class="searching">搜索</button>
   </nav-bar>
 </template>
 <script>
 import NavBar from '@/components/navbar/NavBar';
+import Searchings from '@/plugin/searching.js';
 
 export default {
   name: "SearchNav",
   components:{
     NavBar
   },
+  data(){
+    return {
+      sAjax: new Searchings(),
+      handler: null,
+    }
+  },
   methods: {
     back(){
       this.$store.state.tabbar.style.display = 'flex';
       this.$router.push('/home');
+    },
+    searching(e){
+      let vals = e.target.value;
+      this.handler = this.sAjax.debounce(this.sAjax.send.bind(this.sAjax),500);
+      this.handler(vals);
     }
   },
   mounted() {
@@ -54,7 +66,7 @@ export default {
   width: 100%;
   background: #f7f7f7;
   border-radius: 15px;
-  i{
+  i:nth-child(1){
     position: absolute;
     left: 5px;
     top: 6px;
@@ -73,7 +85,7 @@ export default {
     vertical-align: middle;
     outline: none;
     white-space: nowrap;
-    width: 80%;
+    width: 85%;
     line-height: 30px;
   }
 }

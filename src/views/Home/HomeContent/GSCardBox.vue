@@ -35,7 +35,10 @@
           <p>我是介绍</p>
         </template>
       </item-card-top>
-      <el-button type="primary" icon="el-icon-refresh-left">换一批</el-button>
+      <div class="more-cg">
+        <el-button type="primary" icon="el-icon-refresh-left">更多</el-button>
+        <el-button type="primary" icon="el-icon-refresh-left">换一批</el-button>
+      </div>
     </div>
 </template>
 <script>
@@ -53,9 +56,23 @@ export default {
   width: 100%;
   padding: 5px 10px 5px 15px;
   overflow: hidden;
-  .el-button{
+  .more-cg{
+    height: 100%;
     width: 100%;
-    margin: 15px 0;
+    overflow: hidden;
+    display: flex;
+    .el-button{
+      margin: 10px;
+      margin-top: 30px;
+      margin-bottom: 0;
+      background-color: #f5f7fa;
+      color: #222;
+      border: none;
+      border-radius: 20px;
+    }
+    i{
+      color: #0bbe06;
+    }
   }
 }
 </style>

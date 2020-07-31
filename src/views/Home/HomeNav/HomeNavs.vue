@@ -34,19 +34,24 @@ export default {
   img {
     height: 25px;
     width: 90%;
-    padding-left: 5px;
+    padding-left: 10px;
+    margin-top: 10px;
   }
 }
 .home-nav{
+  background-image: linear-gradient(90deg, #1a2e4a 0, #409890 100%);
+  border-bottom: none;
 .nav-search {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
+  color: rgba(255,255,255,0.8);
   i{
     font-size: 21px;
     padding-right: 25px;
     padding-bottom: 5px;
+    color: #00cc36;
   }
 }
 .nav-lists{
@@ -58,11 +63,11 @@ export default {
     padding: 10px;
     margin-bottom: 4px;
     font-size: 12px;
-    color: #fff;
+    color: #333;
     border-radius: 15px;
     border: none;
     box-sizing: border-box;
-    background: #1296db;
+    background: linear-gradient(180deg, #16e09d 0%, #16e05a 100%);
     font-weight: 500;
   }
 }
