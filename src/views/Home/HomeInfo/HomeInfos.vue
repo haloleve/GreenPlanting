@@ -3,7 +3,7 @@
     <nav-bar>
       <button slot="nav-back" @click="back" class="back el-icon-arrow-left"></button>
       <div slot="nav-title">
-        <h3>花卉种植</h3>
+        <h3>{{getCategory}}</h3>
       </div>
     </nav-bar>
     <item-info></item-info>
@@ -33,6 +33,9 @@ export default {
   computed: {
     isSearch(){
       return this.$route.path.indexOf('info') !== -1;
+    },
+    getCategory(){
+      return this.$route.params.category;
     }
   },
 }

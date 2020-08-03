@@ -21,11 +21,12 @@ export default {
 </script>
 <style lang="scss" scope>
 .menu-nav{
+  background: #ceffd1;
   .back{
     width: 50px;
     height: 44px;
     color: #666;
-    background-color: #fff;
+    background-color: #ceffd1;
     box-sizing: border-box;
     border: none;
     outline: none;

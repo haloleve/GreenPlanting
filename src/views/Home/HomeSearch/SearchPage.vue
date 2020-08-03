@@ -1,6 +1,7 @@
 <template>
   <div class="search">
     <search-nav></search-nav>
+    <search-key-word v-if="hasKeyWord" :keyword="hasKeyWord"></search-key-word>
     <search-hot></search-hot>
     <search-box>
       <template slot="search-box">
@@ -26,6 +27,7 @@ import SearchRecent from './SearchRecent';
 import SearchBox from './SearchBox';
 import SearchHot from './SearchHot';
 import SearchHotList from './SearchHotList';
+import SearchKeyWord from './SearchKeyWord.vue';
 import CItem from '@/components/common/CItem';
 
 
@@ -37,9 +39,19 @@ export default {
     SearchBox,
     SearchHot,
     SearchHotList,
-    CItem
+    CItem,
+    SearchKeyWord
   },
-  
+  data(){
+    return {
+      keyword: this.$store.state.searchRes
+    }
+  },
+  computed: {
+    hasKeyWord(){
+      return this.$store.state.searchRes;
+    }
+  },
 }
 </script>
 <style lang="scss" scope>

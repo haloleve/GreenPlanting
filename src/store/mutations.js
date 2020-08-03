@@ -7,5 +7,13 @@ export default {
     },
     setTab(state, payload) {
         state.tabbar = payload;
+    },
+    searching(state, payload) {
+        state.searchRes = payload.res;
+        state.searchKey = payload.vals
+        state.searchInput = payload.searchInput;
+    },
+    searchRes(state) {
+        state.searchRes = null;
     }
 };

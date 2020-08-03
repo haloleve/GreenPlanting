@@ -1,15 +1,18 @@
 <template>
   <main>
     <menu-nav></menu-nav>
+    <menu-list></menu-list>
   </main>
 </template>
 <script>
 import MenuNav from './MenuNav';
+import MenuList from './MenuList';
 
 export default {
   name: 'HomeMenu',
   components:{
-    MenuNav
+    MenuNav,
+    MenuList
   },
   mounted() {
     if(this.isMenu){
@@ -24,5 +27,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
+main{
+  margin-bottom: 0;
+}
 </style>

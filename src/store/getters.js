@@ -4,5 +4,8 @@ export default {
     },
     tabbar(state) {
         return state.tabbar;
+    },
+    searchInput(state) {
+        return state.searchInput;
     }
 };

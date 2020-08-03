@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     toMore(){
-      this.$router.push('/info')
+      this.$router.push('/home/hhzz')
     }
   },
 }

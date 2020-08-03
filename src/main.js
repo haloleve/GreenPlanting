@@ -4,6 +4,8 @@ import router from "./router";
 import store from "./store";
 import './plugin/element';
 
+
+
 Vue.config.productionTip = false;
 
 new Vue({

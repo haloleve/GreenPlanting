@@ -137,7 +137,7 @@ const routes = [{
         component: Search
     },
     {
-        path: "/info",
+        path: "/info/:category",
         name: "HomeInfo",
         component: PlaneInfo
     },

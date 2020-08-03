@@ -3,7 +3,7 @@
     <button slot="nav-back" @click="back" class="back el-icon-arrow-left"></button>
     <div class="searchbox" slot="nav-title">
       <i class="el-icon-search"></i>
-      <input @input="searching" type="search" maxlength="20" placeholder="请输入搜索内容">
+      <input ref="searchKey" @input="searching" type="search" maxlength="20" placeholder="请输入搜索内容">
     </div>
     <button slot="nav-lists" class="searching">搜索</button>
   </nav-bar>
@@ -11,6 +11,7 @@
 <script>
 import NavBar from '@/components/navbar/NavBar';
 import Searchings from '@/plugin/searching.js';
+import { get,jsonp } from '@/utils/request';
 
 export default {
   name: "SearchNav",
@@ -19,8 +20,8 @@ export default {
   },
   data(){
     return {
-      sAjax: new Searchings(),
-      handler: null,
+      // sAjax: new Searchings(),
+      // handler: null,
     }
   },
   methods: {
@@ -30,9 +31,15 @@ export default {
     },
     searching(e){
       let vals = e.target.value;
-      this.handler = this.sAjax.debounce(this.sAjax.send.bind(this.sAjax),500);
-      this.handler(vals);
-    }
+      let jsonpUrl = `https://wq.jd.com/bases/searchdropdown/getdropdown?terminal=m&zip=1&key=${vals}&newjson=1&_=1596415708226&sceneval=2&callback=cb`;
+      jsonp(jsonpUrl).then((res)=>{
+        console.log();
+        let args = { res, vals , searchInput:this.$refs.searchKey }
+        this.$store.dispatch('searching',args);
+      });
+      // this.handler = this.sAjax.debounce(this.sAjax.send.bind(this.sAjax),500);
+      // this.handler(vals);
+    },
   },
   mounted() {
     if(this.isSearch){
@@ -48,8 +55,11 @@ export default {
 </script>
 <style lang="scss" scope>
 .nav-back{
-  flex: 1.5 !important;;
+  flex: 1.5 !important;
 } 
+.nav-bar-item{
+  position: relative;
+}
 .back{
   width: 50px;
   height: 44px;

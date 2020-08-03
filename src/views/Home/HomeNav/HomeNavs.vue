@@ -2,7 +2,11 @@
   <nav-bar class="home-nav">
       <img slot="nav-back" src="https://cdnfile.aixifan.com/static/common/widget/header/img/logo.1630669e02c65e87236f.svg" />
       <div class="nav-search" slot="nav-title"><i @click="search" class="el-icon-search"></i></div>
-    <button slot="nav-lists">请登录</button>
+    <button v-if="!userinfo" @click="toLogin" slot="nav-lists">请登录</button>
+    <template v-else slot="nav-lists">
+      <img :src="require(`@/assets/images/homepage/carous1.jpg`)" alt="" />
+      <span>{{userinfo.username}}</span>
+    </template>
   </nav-bar>
 </template>
 <script>
@@ -16,7 +20,7 @@ export default {
   },
   data(){
     return {
-      
+      userinfo: ''
     }
   },
   components: {
@@ -25,8 +29,14 @@ export default {
   methods: {
     search(){
       this.$router.push(this.path);
+    },
+    toLogin(){
+      this.$router.push('/profile')
     }
   },
+  created() {
+    this.userinfo = JSON.parse(window.localStorage.getItem('userinfo'));
+  }
 }
 </script>
 <style lang="scss" scope>
@@ -37,6 +47,7 @@ export default {
     padding-left: 10px;
     margin-top: 10px;
   }
+
 }
 .home-nav{
   background-image: linear-gradient(90deg, #1a2e4a 0, #409890 100%);
@@ -57,6 +68,18 @@ export default {
 .nav-lists{
   display: flex;
   justify-content: center;
+  img{
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-top: 4px;
+  }
+  span{
+    font-size: 14px;
+    color: #fff;
+  }
   button{
     width: 60px;
     height: 30px;
