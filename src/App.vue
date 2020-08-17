@@ -11,7 +11,6 @@ export default {
   components:{
     TabBar  
   },
-  
 }
 </script>
 <style>

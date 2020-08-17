@@ -1,9 +1,14 @@
 <template>
-  <button class="issue-btn el-icon-plus"></button>
+  <button class="issue-btn el-icon-plus" @click="toIssue"></button>
 </template>
 <script>
 export default {
-  name: 'IssueButton'
+  name: 'IssueButton',
+  methods: {
+    toIssue(){
+      this.$router.push('/issue')
+    }
+  },
 }
 </script>
 <style lang="scss" scoped>

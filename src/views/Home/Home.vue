@@ -2,9 +2,11 @@
   <main>
     <home-nav :class="searchBarFixed == true ? 'isFixed' :''" path="/search"></home-nav>
     <home-slider :class="sliderBarFixed == true ? 'isFixedSlider' :''"></home-slider>
-    <transition name="slider">
-      <router-view></router-view>
-    </transition>
+    <keep-alive>
+      <transition name="slider">
+          <router-view></router-view>
+      </transition>
+    </keep-alive>
   </main>
 </template>
 <script>
@@ -17,6 +19,7 @@ export default {
     return {
       searchBarFixed: false,
       sliderBarFixed: false,
+      path: '/home/'
     }
   },
   components:{
@@ -38,6 +41,13 @@ export default {
   mounted () {
     window.addEventListener('scroll', this.handleScroll);
   },
+  activated() {
+    this.$router.push(this.path)
+  },
+  beforeRouteLeave (to, from, next) {
+    this.path = this.$route.path;
+    next()
+  }
 }
 </script>
 <style lang="scss" scope>

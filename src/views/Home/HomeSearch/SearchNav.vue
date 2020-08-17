@@ -5,7 +5,7 @@
       <i class="el-icon-search"></i>
       <input ref="searchKey" @input="searching" type="search" maxlength="20" placeholder="请输入搜索内容">
     </div>
-    <button slot="nav-lists" class="searching">搜索</button>
+    <button @click="searchContent" slot="nav-lists" class="searching">搜索</button>
   </nav-bar>
 </template>
 <script>
@@ -15,19 +15,20 @@ import { get,jsonp } from '@/utils/request';
 
 export default {
   name: "SearchNav",
+  props:{
+    path: String
+  },
   components:{
     NavBar
   },
   data(){
     return {
-      // sAjax: new Searchings(),
-      // handler: null,
     }
   },
   methods: {
     back(){
       this.$store.state.tabbar.style.display = 'flex';
-      this.$router.push('/home');
+      this.$router.push(this.path);
     },
     searching(e){
       let vals = e.target.value;
@@ -40,6 +41,12 @@ export default {
       // this.handler = this.sAjax.debounce(this.sAjax.send.bind(this.sAjax),500);
       // this.handler(vals);
     },
+    searchContent(){
+      let obj = [{id:'1',name: '我是测试的1',info: '我就是一个介绍啊'},{id:'2',name: '我是测试的2',info: '我就是一个介绍啊'},{id:'3',name: '我是测试的3',info: '我就是一个介绍啊'}];
+      this.$store.commit('searchRes');
+      this.$store.commit('setListInfo',obj);
+      this.$router.push('/search/lists');
+    }
   },
   mounted() {
     if(this.isSearch){

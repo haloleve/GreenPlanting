@@ -10,10 +10,19 @@ export default {
     },
     searching(state, payload) {
         state.searchRes = payload.res;
-        state.searchKey = payload.vals
+        state.searchKey = payload.vals;
         state.searchInput = payload.searchInput;
     },
     searchRes(state) {
         state.searchRes = null;
+    },
+    searchKey(state, keyword) {
+        state.searchKey = keyword;
+    },
+    setListInfo(state, payload) {
+        state.listInfo = payload
+    },
+    setBackTop(state, payload) {
+        state.backTop = payload
     }
 };

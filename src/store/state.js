@@ -4,4 +4,6 @@ export default {
     searchRes: null,
     searchKey: null,
     searchInput: null,
+    listInfo: null,
+    backTop: null
 };

@@ -7,5 +7,11 @@ export default {
     },
     searchInput(state) {
         return state.searchInput;
+    },
+    getListInfo(state) {
+        return state.listInfo
+    },
+    getBackTop(state) {
+        return state.backTop
     }
 };

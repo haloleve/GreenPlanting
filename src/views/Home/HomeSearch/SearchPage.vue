@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-    <search-nav></search-nav>
+    <search-nav path="/home"></search-nav>
     <search-key-word v-if="hasKeyWord" :keyword="hasKeyWord"></search-key-word>
     <search-hot></search-hot>
     <search-box>

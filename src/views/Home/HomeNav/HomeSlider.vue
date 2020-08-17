@@ -11,13 +11,12 @@
   </div>
 </template>
 <script>
-// import Touchs from '@/plugin/touch.js';
 
 export default {
   name: 'HomeSlider',
   data(){
     return {
-      i: 1,
+      i: 0,
       sliders: [
         { id: 1,path: '/home/',vals: '所有'},
         { id: 2,path: '/home/hhzz',vals: '花卉种植'},

@@ -51,17 +51,20 @@ class Carous {
         this.ul.addEventListener("touchstart", function(e) {
             startX = e.targetTouches[0].pageX;
             clearInterval(_this.timeLoop);
-        });
-        this.ul.addEventListener("touchmove", function(e) {
-            //计算移动距离
-            //console.log(e.targetTouches)
-            moveX = e.targetTouches[0].pageX - startX;
-            let translateX = -_this.index * _this.w + moveX;
-            _this.ul.style.transition = "none";
-            _this.ul.style.transform = `translateX(${translateX}px)`;
-            _this.flag = true;
-            e.preventDefault();
-        });
+        }, { passive: true });
+        this.ul.addEventListener(
+            "touchmove",
+            function(e) {
+                //计算移动距离
+                //console.log(e.targetTouches)
+                moveX = e.targetTouches[0].pageX - startX;
+                let translateX = -_this.index * _this.w + moveX;
+                _this.ul.style.transition = "none";
+                _this.ul.style.transform = `translateX(${translateX}px)`;
+                _this.flag = true;
+                e.preventDefault();
+            }, { passive: true }
+        );
         this.ul.addEventListener("touchend", function(e) {
             if (_this.flag) {
                 if (Math.abs(moveX) > 50) {

@@ -5,15 +5,22 @@
 export default {
   name: 'BackTop',
   mounted() {
+    this.$store.commit('setBackTop',this.$refs.back);
+    this.backTop = this.$store.getters.getBackTop;
     window.addEventListener('scroll', this.toTop);
+  },
+  data(){
+    return {
+      backTop: null
+    }
   },
   methods: {
     toTop(){
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
       if(scrollTop > 300){
-        this.$refs.back.className = 'back-top el-icon-upload2'
+        this.backTop.className = 'back-top el-icon-upload2'
       }else{
-        this.$refs.back.className = 'el-icon-upload2';
+        this.backTop.className = 'el-icon-upload2';
       }
     },
     btnToTop(){

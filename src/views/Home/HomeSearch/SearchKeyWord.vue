@@ -13,6 +13,7 @@ export default {
     searchKey(item){
       // console.log(this.$store.state.searchInput);
       this.$store.getters.searchInput.value = item.key;
+      this.$store.commit('searchKey',item.key);
       this.$store.commit('searchRes');
     }
   },
