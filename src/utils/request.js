@@ -22,7 +22,7 @@ instance.interceptors.request.use(
 );
 //所有网络请求返回都会先走这个方法
 //根据返回状态码做相应的处理
-instance.interceptors.request.use(function(response) {
+instance.interceptors.response.use(function(response) {
     console.group("全局相应拦截");
     console.log(response);
     console.groupEnd();

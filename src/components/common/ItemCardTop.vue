@@ -39,7 +39,7 @@ export default {
     color: #000028;
     margin-top: 6px;
     p{
-      width: 90%;
+      width: 98%;
       margin-top: 4px;
       color: #a2a2b6;
       line-height: 18px;

@@ -2,11 +2,11 @@
     <div class="content-item">
       <div class="user">
         <img src="@/assets/images/homepage/plane01.jpg" alt="用户头像">
-        <p>王多鱼</p>
+        <p>等一下天亮</p>
       </div>
       <mood-comment-content>
         <p slot="comment-cont">三峡日报 疏花水柏枝是极度濒危易灭绝的野生植物。上世纪末，植物专家断言三峡水库建成蓄水后其天然种群将灭绝。4月11日，记者在三峡苗圃研究中心惊喜地发现，1000多株疏花水柏枝在这里旺盛地生长着。</p>
-        <img slot="comment-pic" src="@/assets/images/homepage/plane01.jpg" alt="">
+        <img slot="comment-pic" src="@/assets/images/homepage/plane03.jpg" alt="">
         <comment-icon slot="comment-icon" @updateReply="updateReply" :reply="isReply"></comment-icon>
       </mood-comment-content>
       <mood-comment v-if="isReply"></mood-comment>

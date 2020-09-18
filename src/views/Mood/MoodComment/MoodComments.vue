@@ -4,32 +4,32 @@
       <h3>评论</h3>
       <ul>
         <li>
-          <img src="@/assets/images/homepage/plane01.jpg" alt="用户头像">
+          <img src="@/assets/images/homepage/plane02.jpg" alt="用户头像">
           <div class="user-comment-content">
             <p>
-              <span>用户名</span>
+              <span>不语</span>
               <span><i class="el-icon-thumb"></i>49</span>
               </p>
-            <div class="comment-text">朝辞白帝彩云见,千里江陵一日还朝辞白帝彩云见,千里江陵一日还朝辞白帝彩云见,千里江陵一日还</div>
+            <div class="comment-text">刹那间的美丽，一瞬间的永恒。昙花一现，人们用昙花一现比喻美好事物不持久。</div>
           </div>
         </li>
         <li>
-          <img src="@/assets/images/homepage/plane01.jpg" alt="用户头像">
+          <img src="@/assets/images/homepage/plane05.jpg" alt="用户头像">
           <div class="user-comment-content">
             <p>
-              <span>用户名</span>
+              <span>莫问</span>
               <span><i class="el-icon-thumb"></i>49</span>
             </p>
-            <div class="comment-text">朝辞白帝彩云见,千里江陵一日还朝辞白帝彩云见,千里江陵一日还朝辞白帝彩云见,千里江陵一日还</div>
+            <div class="comment-text">它花期虽然很短，但是开花的时候美丽高贵，清香四溢。它能够释放出负离子，让室内的空气清新怡人。</div>
           </div>
         </li>
       </ul>
     </div>
     <div class="all-comment">
-      <p @click="toPinLun">查看全部100条评论</p>
+      <p @click="toPinLun">查看全部12条评论</p>
     </div>
     <div class="user-comments-input">
-      <img src="@/assets/images/homepage/plane01.jpg" alt="用户头像">
+      <img src="@/assets/images/homepage/plane04.jpg" alt="用户头像">
       <input @click="toPinLun" type="text" placeholder="添加评论..">
     </div>
     

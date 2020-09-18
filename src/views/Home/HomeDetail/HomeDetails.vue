@@ -6,7 +6,7 @@
     </nav-bar>
     <article>
       <div class="detail-head">
-        <img src="@/assets/images/homepage/plane01.jpg" alt="">
+        <img src="@/assets/images/homepage/plane03.jpg" alt="">
         <p class="detail-head-info">
             孔雀竹芋，叶面上有墨绿与白色或淡黄相间的羽状斑纹，并具有独特金属光泽，好似孔雀的尾羽，因而叫孔雀竹芋。孔雀竹芋适宜盆栽，作室内摆设，甚为别致精美。下面为大家介绍一下孔雀竹芋的养护心得。
         </p>
